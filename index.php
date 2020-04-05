@@ -1,6 +1,4 @@
 <?php 
-//Ik verander dit voor de Git opracht
-include '';
 include 'inc/functions.php';
 
 $teams = getTeams();
