@@ -1,0 +1,325 @@
+body {  
+    background-color: black;
+    margin: 0px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    height: 210px;
+    background-color: #002e62;
+    border: 1px solid black;
+}
+
+#logo-image {
+    float: left;
+}
+
+#logo-text {
+    font-weight: 1000;
+    font-size: 119px;
+    color: white;
+    float: left;
+    margin-top: 48px;
+}
+
+#main-container {
+    width: 1600px;
+    height: 0 auto;
+    margin: 0 auto;
+}
+
+#main-left {
+    float: left;
+    width: 300px;
+    height: 672px;
+    background-color: grey;
+    border: 1px solid black;
+    border: 1px solid #002e62;
+}
+
+#main-center {
+    float: left;
+    margin-left: 47px;
+    width: 500px;
+    height: 672px;
+    background-color: grey;
+    border: 1px solid #002e62;
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #002e62;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #002e62;
+    border-radius: 10px;
+  }
+
+#players-container {
+    height: 671px;
+    width: 0 auto;
+}
+
+h3 {
+    color: #002e62;
+}
+
+p {
+    color: white;
+}
+
+a {
+    color: #002e62;
+    text-decoration-line: initial;
+}
+
+li {
+    list-style: none;
+}
+
+
+#text-container {
+    float: left;
+    background-image: url("../images/header_bg.jpg");
+    width: 258px;
+    height: 320px;
+    background-size: cover;
+    opacity: 1;
+    margin-top: -15px;
+}
+
+#hero-image {
+    width: 220px;
+    height: 320px;
+    float: left;
+    margin-top: -15px;
+}
+
+#main-right {
+    float: left;
+    margin-left: 47px;
+    width: 719px;
+    height: 672px;
+    background-color: grey;
+    border: 1px solid black;
+    border: 1px solid #002e62;
+    overflow-y: auto;
+}
+
+#headers {
+    color: white;
+    font-size: 50px;
+    margin-left: 20px;
+}
+
+.player-names {
+    color: white;
+    font-size: 50px;
+}
+
+.player-image {
+    width: 430px;
+    height: 450px;
+    float: left;
+    margin-top: -15px;
+}
+
+li.teams-text {
+    list-style: none;
+    font-size: 30px;
+    margin-left: 25px;
+}
+
+li.players-text {
+    color: white;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+li.player-description {
+    color: white;
+    font-size: 25px;
+}
+
+.player-image-right {
+    width: 200px;
+    height: 200px;
+    margin-left: 175px;
+    border-radius: 50%;
+    border: solid 10px white;
+}
+
+#footballfield-container {
+    width: 680px;
+    height: 170px;
+    background-color: green;
+    border: solid 10px white;
+}
+
+.Team-text {
+    color: white;
+    font-size: 10px;
+}
+
+li#player-name-right {
+    color: white;
+    font-size: 40px;
+
+    margin-left: 222.5px;
+}
+
+footer {
+    float: left;
+    color: #002e62;
+    background-color: grey;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-size: 40px;
+    border: 1px solid #002e62;
+}
+
+#error-message {
+    color: red;
+}
+
+
+
+
+/* Stars */
+
+/* Ratings widget */
+@font-face
+{
+    font-family: 'anudawitalic';
+    src: url('../fonts/anudi-webfont.woff2') format('woff2'),
+         url('../fonts/anudi-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face
+{
+    font-family: 'anudawregular';
+    src: url('../fonts/anudrg-webfont.woff2') format('woff2'),
+         url('../fonts/anudrg-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+form.frmRate
+{
+	margin: 10px auto;
+}
+
+.rate {
+    float: left;
+}
+
+
+/* Hide radio */
+.rate > input[type='radio']
+{
+    display: none;
+}
+
+/* Order correctly by floating highest to the right */
+.rate > label.lblRating
+{
+    float: right;
+}
+
+/* The star of the show */
+.rate > label.lblRating:before
+{
+    display: inline-block;
+    font-size: 30px;
+    padding: 5px;
+    margin: 0;
+    cursor: pointer;
+    font-family: FontAwesome;
+    content: "\f005 "; /* full star */
+}
+
+/* Zero stars rating */
+.rate > label.lblRating:last-child:before
+{
+    content: "\f006 "; /* empty star outline */
+}
+
+/* Half star trick */
+.rate label.half:before
+{
+    content: "\f089 "; /* half star no outline */
+    position: absolute;
+    padding-right: 0;
+}
+
+/* Click + hover color */
+input:checked ~ label.lblRating,
+label.lblRating:hover, label.lblRating:hover ~ label
+{ 
+	color: #ffd900;
+} 
+
+/* Hover highlights */
+input:checked + label.lblRating:hover, input:checked ~ label.lblRating:hover, /* highlight current and previous stars */
+input:checked ~ label.lblRating:hover ~ label.lblRating, /* highlight previous selected stars for new rating */
+label.lblRating:hover ~ input:checked ~ label.lblRating /* highlight previous selected stars */
+{
+	color: #f0cc00; 
+} 
+
+.divSubmit
+{
+	display: block;
+	width: 250px;
+	height: 100%;
+}
+
+.divSubmit > input[type='submit']
+{
+	width: 180px;
+	height: 60px;
+	font-family: anudawregular;
+	font-size: 20px;
+	border: 1px solid #000;
+}
+
+.divSubmit > input[type='submit']:hover
+{
+	background-color: #f0cc00;
+	color: #000000;
+	cursor: pointer;
+	border: 1px solid #000;
+}
+
+#subject {
+    height: 500px;
+    float: left;
+}
+
+fieldset {
+    height: 275px;
+    float: left;
+    margin-top: 120px;
+    margin-left: 60px;
+}
+
+#submit-container {
+    width: 0 auto;
+    height: 0 auto;
+    float: left;
+}
