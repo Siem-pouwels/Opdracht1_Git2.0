@@ -1,6 +1,6 @@
 <?php 
 include 'inc/functions.php';
-
+//dit is voor git
 $teams = getTeams();
 
 if(isset($_GET['teamId']))
